@@ -9,8 +9,10 @@ function handleInput(e){
 }
 
 function handleAdd(){
-  setTodo([...todo, inputValue]);
-  setValue(" ");
+
+  if(inputValue.trim() === "") return;
+  setTodo(prev =>([...prev, inputValue]));
+  setValue("");
 }
 
 function handleDelete(indexToDelete) {
@@ -25,7 +27,7 @@ function handleDelete(indexToDelete) {
     <>
     
     <label htmlFor="todos">Enter todo:- </label>
-    <input type="text" id='todos' onChange={handleInput}/>
+    <input type="text" id='todos' value={inputValue} onChange={handleInput}/>
     <button onClick={handleAdd}>add</button>
     
     <ul>

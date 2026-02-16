@@ -8,7 +8,7 @@ function App() {
     let timer = null;
     if (isRunning && counter>0) {
       timer = setInterval(() => {
-        setCounter(prev => prev-1);
+        setCounter(prev => prev -1);
       }, 200);
     }
     return () => clearInterval(timer);

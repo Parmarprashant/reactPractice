@@ -1,5 +1,5 @@
 import {useState} from 'react'
-
+import Compo from './Components/Fullform'
 function App() {
 
   const [details, setDetails] = useState({
@@ -26,7 +26,7 @@ function handleSubmit(e){
 
   return (
     <>
-    <div className="main">
+    {/* <div className="main">
     <form onSubmit={handleMain}>
        
        <label htmlFor="named">Name:- </label>
@@ -44,13 +44,13 @@ function handleSubmit(e){
        <br />
        <br />
        <button type="submit">Submit</button>
-
-
-      
-
     </form>
 
-    </div>
+    </div> */}
+
+
+    <Compo></Compo>
+    
     </>
   )
 }
